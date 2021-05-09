@@ -26,7 +26,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM `data_karyawan`");
                 background: #222; 
                 overflow: hidden;
                 box-shadow: 0px 2px 10px black;
-                background:#02475e;
+                background:#caf7e3;
             }
             button{
                 padding: 14px 40px;
@@ -40,6 +40,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM `data_karyawan`");
                 text-decoration:none;
             }
             h1{
+                font-family: 'Poppins', sans-serif;
                 font-size: 80px;
                 color: white;
             }
@@ -48,14 +49,13 @@ $result = mysqli_query($mysqli, "SELECT * FROM `data_karyawan`");
     <body>
         <nav class="navi">
         <ul>
-            <a href="#" class="navbar-brand"><img src="https://i1.wp.com/uns.ac.id/id/wp-content/uploads/logo-uns-biru.png?fit=528%2C526&ssl=1" style="width: 5%;"></a>
+            <a href="#" class="navbar-brand"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Skymark_Airlines_company_logos.svg/1024px-Skymark_Airlines_company_logos.svg.png" style="width: 5%;"></a>
         </ul>
         </nav>
         <div id="box1">
             <center>
             <br><br>
             <h1>Input Data Karyawan</h1>
-            <button><a href="#table" class="table"> Scroll to Bottom </a></button>
             <button><a href="tambah.php">Add Karyawan</a></button>
             </center>
             <br/>
