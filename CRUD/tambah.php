@@ -53,7 +53,7 @@
         $tanggal_lahir = $_POST['tanggal_lahir'];
 
         include_once("config.php");
-        $result = mysqli_query($mysqli, "INSERT INTO karyawan(nama,email,telepon,alamat,jenis_kelamin,tempat_lahir,tanggal_lahir) 
+        $result = mysqli_query($mysqli, "INSERT INTO data_karyawan(nama,email,telepon,alamat,jenis_kelamin,tempat_lahir,tanggal_lahir) 
         VALUES('$nama','$email','$telepon','$alamat','$jenis_kelamin','$tempat_lahir','$tanggal_lahir')");
         echo "Data berhasil ditambahkan! <a href='index.php'>Lihat Data Karyawan</a>";
         echo mysqli_error($mysqli);
