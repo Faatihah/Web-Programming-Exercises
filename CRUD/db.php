@@ -20,7 +20,7 @@
     <script>console.log('Connection Success')</script>
     <?php
     }
-    $query = "UPDATE karyawan SET 
+    $query = "UPDATE data_karyawan SET 
     nama='$nama', 
     email='$email', 
     telepon='$telepon', 
