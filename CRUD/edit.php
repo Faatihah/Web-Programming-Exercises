@@ -2,41 +2,41 @@
 include_once("config.php");
 if(isset($_POST['update']))
 {
-    $idkaryawan = $_POST['idkaryawan'];
-    $name=$_POST['name'];
-    $mobile=$_POST['mobile'];
+    $id_karyawan = $_POST['id_karyawan'];
+    $nama=$_POST['name'];
+    $telepon=$_POST['telepon'];
     $email=$_POST['email'];
     $alamat = $_POST['alamat'];
-    $jeniskelamin = $_POST['jeniskelamin'];
-    $tempatlahir = $_POST['tempatlahir'];
-    $tanggallahir = $_POST['tanggallahir'];
-$result = mysqli_query($mysqli, "UPDATE karyawan SET nama='$name',email='$email',mobile='$mobile',alamat='$alamat',jeniskelamin='$jeniskelamin',tempatlahir='$tempatlahir',tanggallahir='$tanggallahir' WHERE id=$id");
+    $jenis_kelamin = $_POST['jenis_kelamin'];
+    $tempat_lahir = $_POST['tempat_lahir'];
+    $tanggal_lahir = $_POST['tanggal_lahir'];
+$result = mysqli_query($mysqli, "UPDATE data_karyawan SET nama='$nama',email='$email',telepon='$telepon',alamat='$alamat',jenis_kelamin='$jenis_kelamin',tempat_lahir='$tempat_lahir',tanggal_lahir='$tanggal_lahir' WHERE id=$id");
 header("Location: index.php");
 }
 ?>
 <?php
 $id = $_GET['id'];
-$result = mysqli_query($mysqli, "SELECT * FROM karyawan WHERE idkaryawan=$id");
+$result = mysqli_query($mysqli, "SELECT * FROM data_karyawan WHERE id_karyawan=$id");
 while($user_data = mysqli_fetch_assoc($result))
 {
-    $idkaryawan =$user_data['idkaryawan'];
-    $name = $user_data['nama'];
+    $id_karyawan =$user_data['id_karyawan'];
+    $nama = $user_data['nama'];
     $email = $user_data['email'];
-    $mobile = $user_data['mobile'];
+    $telepon = $user_data['telepon'];
     $alamat = $user_data['alamat'];
-    $jeniskelamin = $user_data['jenis_kelamin'];
+    $jenis_kelamin = $user_data['jenis_kelamin'];
     $tempat_lahir = $user_data['tempat_lahir'];
     $tanggal_lahir = $user_data['tanggal_lahir'];
 }
 ?>
 <html>
     <head>
-        <title>Edit Data Mahasiswa</title>
+        <title>Edit Data Karyawan</title>
     </head>
     <body>
         <a href="index.php">Home</a>
         <br/><br/>
-        <form name="update_user" method="post" action="database.php">
+        <form name="update_user" method="post" action="db.php">
             <table border="0">
             <tr>
                 <td>Id Karyawan</td>
@@ -51,7 +51,7 @@ while($user_data = mysqli_fetch_assoc($result))
                 <td><input type="text" name="email" value=<?php echo $email;?>></td>
             </tr>
             <tr>
-                <td>Mobile</td>
+                <td>Telepon</td>
                 <td><input type="text" name="telepon" value=<?php echo $telepon;?>></td>
             </tr>
             <tr>
